@@ -1,0 +1,18 @@
+{
+  "favoritos": [
+    {
+      "nombre": "R2-D2",
+      "altura": "96",
+      "peso": "32",
+      "nacimiento": "33BBY",
+      "id": 1
+    },
+    {
+      "nombre": "Luke Skywalker",
+      "altura": "172",
+      "peso": "77",
+      "nacimiento": "19BBY",
+      "id": 2
+    }
+  ]
+}

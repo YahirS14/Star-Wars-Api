@@ -1,0 +1,101 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.contenedor-card{
+
+
+    margin-top: 30rem;
+
+    @include m.tablet{
+        @include m.grid(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+    @include m.laptop{
+        @include m.grid(3, 1fr);
+        grid-gap: 2rem
+    }
+
+    @include m.desktop{
+        @include m.grid(4, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .card{
+        background-image: url('/src/assets/descarga.jfif');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 5rem;
+        min-height: 45rem;
+        margin: 0 5rem;
+        margin-bottom: 4rem;
+        position: relative;
+        border-radius: 1rem;
+        transition: all .5s ease-in;
+
+        &:hover{
+            transition: all .5s ease-in;
+            transform: scale(1.05);
+        }
+    }
+   
+}
+.info-card{
+    position: absolute;
+    object-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 40%);
+    border-radius: 1rem;
+
+    h2{
+        color: v.$blanco;
+        font-size: 4rem;
+    }
+    p{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+}
+.contenedor-btn{
+    cursor: pointer;
+    background-color: v.$amarrillo;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 26%;
+    border-radius: 1rem;
+    transition: all .5s ease;
+
+    &:hover{
+        background-color: darken(v.$amarrillo, 30%);
+        transition: all .5s ease;
+    }
+
+    a{
+        color: v.$negro;
+    }
+}
+
+.contenedor-btn-eliminar{
+    cursor: pointer;
+    background-color: v.$rojo;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 38%;
+    border-radius: 1rem;
+    transition: all .5s ease;
+
+    &:hover{
+        background-color: darken(v.$amarrillo, 30%);
+        transition: all .5s ease;
+    }
+
+    a{
+        color: v.$negro;
+    }
+}
